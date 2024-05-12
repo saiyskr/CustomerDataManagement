@@ -1,0 +1,53 @@
+mat-form-field {
+    width: 100%;
+}
+
+
+mat-label {
+    width: 20p;
+}
+
+.dialog {
+    background-color: white;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+td {
+    padding-right: 8px;
+}
+.mat-raised-button{
+    background-color: #C8CCCE;
+}
+
+.submitbtn{
+    background-color: #00599C;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.closebtn {
+    background-color: #C8CCCE;
+    color: black;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1102px) {
+    .table-row{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+form{
+    padding-top:50px;
+}

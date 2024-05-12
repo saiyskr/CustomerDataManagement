@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="left">
+
+        <div class="logo">
+            <img class="logoimg" src="../../../assets/fastenal_logo.png" alt="fastenal_logo"><br>
+            <a href="https://www.fastenal.com">About Us</a>
+        </div>
+        <div class="linkscontainer">
+            <ul class="socialmedia">
+                <li><a href="https://www.instagram.com/fastenal_company/?hl=en"><img src="../../../assets/instagram.png" alt="instagram"></a></li>
+                <li><a href="https://www.facebook.com/fastenalcompany/"><img src="../../../assets/youtube.png" alt="youtube"></a></li>
+                <li><a href="https://twitter.com/fastenal?lang=en"><img src="../../../assets/twitter.png" alt="twitter"></a></li>
+                <li><a href="https://www.linkedin.com/company/fastenal/"> <img src="../../../assets/facebook.png" alt="facebook"></a></li>
+              </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div class="logocontainer">
+            <img src="../../../assets/cdmlogo.png" alt="">
+        </div>
+        <div class="formcontainer">
+            <h1>Register</h1>
+
+            <p>Enter your details to register</p>
+
+            <form [formGroup]="registerForm" autocomplete="off">
+
+                <input type="text" name="name" placeholder="Name" formControlName="name"><br>
+                <mat-error *ngIf="name && name.invalid && name.touched">
+                    <strong> Name Required</strong>
+                 </mat-error>
+                 <br>
+
+                <input type="text" name="phone" placeholder="Phone" formControlName="phone"><br>
+                <mat-error *ngIf="phone && phone.invalid && phone.touched">
+                    <strong> Phone Required</strong>
+                 </mat-error>
+                 <br>
+
+                <input type="email" name="email" placeholder="Email" formControlName="email"><br>
+                <mat-error *ngIf="email && email.invalid && email.touched">
+                    <strong> Email Required</strong>
+                 </mat-error>
+                 <br>
+
+                <input type="password" name="password" placeholder="Password" formControlName="password"><br>
+                <mat-error *ngIf="password && password.invalid && password.touched">
+                    <mat-hint>Password should be of minimum 10 characters containing :<br>-> Alphanumeric characters<br>-> Atleast one Uppercase letter<br>-> Atleast one Lowercase letter<br>-> Atleast one Special character</mat-hint>
+                 </mat-error>
+                 <br>
+
+                <div class="tacbox">
+                    <input class="taa" id="checkbox" type="checkbox" formControlName="checkbox"/>
+                    <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
+                </div>
+                <button type="submit" (click)="register()">Register</button>
+                
+                <div class="register">
+                    <p class="registerpara">Already have an account ?</p>
+                    <button routerLink="/login">Login</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>

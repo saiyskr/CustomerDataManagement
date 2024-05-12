@@ -1,0 +1,48 @@
+.logs{
+    overflow-x:auto;
+    padding-top: 9%;
+    padding-bottom: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.buttonBack{
+    padding: 10px;
+    background-color: #00599C;
+    color: #FFFFFF;
+    margin-left: 1%;
+    margin-right: 2.5%;
+    height: 40px;
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    left: 0;
+    margin-top: 110px;
+    cursor: pointer;
+  }
+table {
+    width: 100%;
+}
+table, tr, td, th{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+th, td {
+    text-align: left;
+    padding: 0.5%;
+    word-wrap: normal;
+    word-break: normal;
+}
+th{
+    font-weight: 500;
+    background-color:#00599C;
+    color: white;
+    text-align: left;
+}
+.center-align{
+    text-align: center;
+    width: 10%;
+}
+.action{
+    font-weight: 500;
+}

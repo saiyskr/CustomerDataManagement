@@ -1,0 +1,152 @@
+*{
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.customize-bname{
+	display: none;
+}
+
+header{
+    background-color: #00599C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+	height: 10%;
+	position: fixed;
+	top: 0%;
+	z-index: 1;
+}
+.logo{
+	width: 10%;
+    background-color: #00599C;
+	display: flex;
+	align-items: center;
+}
+
+.logo img{
+	width: 130px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.nav-search{
+    display: flex;
+    background-color: #00599C;
+    align-items: center;
+    flex-direction: row; 
+	height: 100%;
+	width: 65%;
+
+}
+
+.nav-search input{
+	width: 100%;
+	padding: 12px;
+	height: 40px;
+	border:none;
+}
+
+.nav-search button{
+	color: #FFFFFF;
+	height: 40px;
+	border:none;
+}
+.nav-search button img{
+	height: 90%;
+}
+.admin{
+	width: 140px;
+}
+.admin button{
+	width: 100%;
+}
+.admin p{
+	color:white;
+	font-size: small;
+}
+.nav-div .nav-options{
+    background-color: #00599C;
+    display: inline;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+	padding: 0px;
+}
+.nav-div .nav-options .account{
+    display: inline;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu:hover{
+	background-color: #FFFFFF;
+}
+::ng-deep .customize {
+	background: #00599C;
+	
+}
+
+.mat-icon{
+	color: #FFFFFF;
+}
+span{
+	color: #FFFFFF;
+}
+.nav-options li{
+	cursor: pointer;
+}
+
+
+@media (max-width: 800px){
+	.nav-search{
+		display: flex;
+		background-color: #00599C;
+		align-items: center;
+		flex-direction: row; 
+		height: 100%;
+		width: 40%;
+	}
+}
+@media (max-width: 500px){
+	.nav-search{
+		height: 100%;
+		width: 40%;
+	}
+	.nav-search input{
+		height: 30px;
+		font-size: 10px;
+	}
+	.nav-search button{
+		height: 30px;
+	}
+	.logo img{
+		width: 90px;
+		height: 25px;
+	}
+	.nav-div{
+		width: 25%;
+	}
+	.nav-div .nav-options .account{
+		display: inline;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding-left:15px;
+	}
+	.admin{
+		width: 50px;
+	}
+	.admin p{
+		display: none;
+	}
+	.customize-bname{
+		display: flex;
+	}
+}

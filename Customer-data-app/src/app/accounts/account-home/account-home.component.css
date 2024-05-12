@@ -1,0 +1,153 @@
+.accounts {
+  padding-top: 110px;
+  padding-bottom: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.buttonBack{
+  padding: 10px;
+  background-color: #00599C;
+  color: #FFFFFF;
+  margin-left: 1%;
+  margin-right: 2.5%;
+  height: 40px;
+  position: absolute;
+  border: none;
+  border-radius: 50px;
+  left: 0;
+  margin-top: 110px;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+}
+
+  .email{
+    width: 20%;
+  }
+
+  .location{
+    width: 25%;
+  }
+
+  .plot_button{
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    background-color: #00599C;
+    color: #FFFFFF;
+    margin-top: 2%;
+    margin-left: 0%;
+  }
+
+.email {
+  width: 20%;
+}
+
+.location {
+  width: 25%;
+}
+
+.plot_button {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  background-color: #00599C;
+  color: #FFFFFF;
+  margin-top: 2%;
+  margin-left: 0%;
+}
+
+@media only screen and (max-width: 970px) {
+
+
+
+  .blockdata {
+    display: block;
+  }
+  .buttonBack{
+    display: none;
+  }
+
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #00599C;
+  color: white;
+  font-size: 15px;
+  height: 50px;
+
+
+}
+.table_section {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: 1000px;
+
+
+}
+td {
+  padding: 10px 2px;
+  word-break: normal;
+}
+.tablebody tr:hover td {
+  color: black;
+  cursor: pointer;
+  background-color: #d2eafb;
+
+}
+
+thead {
+  text-align: center;
+}
+.title {
+  font-weight: 500;
+  padding-right: 10px;
+}
+button {
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+}
+.delete_btn {
+  background-color: red;
+  color: white;
+}
+.update_btn {
+  background-color: #00599C;
+  color: white;
+}
+
+@media only screen and (max-width: 480px) {
+  .accounts {
+    font-size: 10px;
+  }
+  
+  .buttonBack{
+    display: none;
+  }
+}
+
+.center-align{
+  text-align: center;
+}
+.left-align{
+  text-align: left;
+}
+th{
+  text-align: left;
+}

@@ -1,0 +1,43 @@
+agm-map{
+    height: 50vh;
+}
+.modal-title{
+    text-align: center;
+    margin-bottom: 3%;
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+}
+input{
+    width: 80%;
+    padding: 1%;
+}
+.modal-footer{
+    display: flex;
+    justify-content: center;
+    margin: 0 2% 2% 2%;
+}
+button{
+    margin: 1% ;
+    padding: 1%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.btn-primary{
+    background-color: #00599C;
+    color: #FFFFFF;
+}
+.btn-secondary{
+    background-color: red;
+    color: #FFFFFF;
+}
+.loc-data{
+    margin-left: 1%;
+}
+h5,p{
+    padding: 0.1%;
+    margin-bottom: 1%;
+}

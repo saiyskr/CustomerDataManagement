@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="left">
+        
+        <div class="logo">
+            <img class="logoimg" src="../../../assets/fastenal_logo.png" alt="fastenal_logo"><br>
+            <a href="www.fastenal.com">About Us</a>
+        </div>
+        <div class="linkscontainer">
+            <ul class="socialmedia">
+                <li><a href="https://www.instagram.com/fastenal_company/?hl=en"><img src="../../../assets/instagram.png" alt="instagram"></a></li>
+                <li><a href="https://www.youtube.com/@fastenal"><img src="../../../assets/youtube.png" alt="youtube"></a></li>
+                <li><a href="https://twitter.com/fastenal?lang=en"><img src="../../../assets/twitter.png" alt="twitter"></a></li>
+                <li><a href="https://www.facebook.com/fastenalcompany/"> <img src="../../../assets/facebook.png" alt="facebook"></a></li>
+              </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div class="logocontainer">
+            <img src="../../../assets/cdmlogo.png" alt="">
+        </div>
+        <div class="formcontainer">
+            <h1>Log Into Fastenal CDM</h1>
+    
+            <p>Enter your login details below</p>
+
+            <form [formGroup]="loginForm" autocomplete="off">
+                <input type="text" name="email" placeholder="Email" formControlName="email"><br>
+             
+                <mat-error *ngIf="email && email.invalid && email.touched">
+                    <strong>Email Required</strong>
+                 </mat-error>
+                 <br>
+
+                <input type="password" name="password" placeholder="Password" formControlName="password"><br>
+                <mat-error *ngIf="password && password.invalid && password.touched">
+                    <strong> Password Required</strong>
+                </mat-error>
+                 <br><br>
+
+                <button class="loginbtn" type="submit" (click)="login()">Login</button>
+                <div class="register">
+                    <p class="registerpara">Don’t have an account ?</p>
+                    <button routerLink="/register">Register</button>
+                </div>
+            </form>
+        </div>
+       
+    </div>
+</div>

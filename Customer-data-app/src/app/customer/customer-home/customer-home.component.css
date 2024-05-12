@@ -1,0 +1,151 @@
+
+@media only screen and (max-width: 970px) {
+
+  table{
+    padding-top: 10%;
+    padding-bottom: 7%;
+  }
+  table,
+  head,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    width: 100vw;
+    height: 100%;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+    min-height: 30px;
+    overflow: hidden;
+    word-break: break-all;
+  }
+
+  td::before {
+    margin: 20px;
+    position: relative;
+    top: 6px;
+    left: 6px;
+    width: 40%;
+    padding-right: 10px;
+    font-weight: bold;
+    top: 0px;
+
+  
+  }
+
+  td:before {
+    content: attr(data-title);
+    padding-right: 10%;  
+  }
+
+ 
+
+}
+@media only screen and (max-width: 706px) {
+  table{
+    padding-top: 20%;
+
+  }
+
+}
+@media only screen and (max-width: 460px) {
+  table{
+    padding-top: 25%;
+   
+  }
+
+}
+@media only screen and (max-width: 412px) {
+  table{
+    padding-top: 25%;
+
+  }
+
+}
+.customers {
+  padding-top: 6%;
+  padding-bottom: 7%;
+}
+
+.table_section {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: 1000px;
+
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #00599C;
+  color: white;
+  font-size: 15px;
+  height: 50px;
+
+}
+th{
+  font-weight: 500;
+}
+th,
+td {
+  border-bottom: 1px solid #C8CCCE;
+  padding: 10px 2px;
+  word-break: break-all;
+  text-align: left;
+  padding-left: 5%;
+}
+
+td img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+tr:hover td {
+  color: black;
+  cursor: pointer;
+  background-color: #d2eafb;
+}
+
+button{
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+}
+.delete_btn{
+  background-color: red;
+  color: white;
+}
+.update_btn{
+  background-color: #00599C;
+  color: white;
+}
+
+
+

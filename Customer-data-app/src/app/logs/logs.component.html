@@ -1,0 +1,31 @@
+<button (click)="backButton()" class="buttonBack">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+<div class="logs">
+
+    <table>
+      <tr>
+        <th>Log ID</th>
+        <th>Admin Name</th>
+        <th>Customer Name</th>
+        <th>Account Name</th>
+        <th>Section Modified</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let log of logList|paginate: {itemsPerPage: pageSize, currentPage: pageNumber, totalItems:totalLogs}">
+        <td class="center-align">{{log.logId}}</td>
+        <td>{{log.adminName|titlecase}}</td>
+        <td>{{log.customerName}}</td>
+        <td>{{log.accountName}}</td>
+        <td>{{log.sectionModified}}</td>
+        <td>{{log.date|date:'mediumDate'}}</td>
+        <td>{{log.time|date:'mediumTime'}}</td>
+        <td class="action" [ngStyle]="log.action === 'Delete' ? {color:'red'} : log.action === 'Update' ?  {color:'orange'}: {color:'green'}">{{log.action}}</td>
+      </tr>
+    </table>
+    <div class="paginationclass">
+      <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
+    </div>
+  </div>

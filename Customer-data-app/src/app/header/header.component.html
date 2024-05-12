@@ -1,0 +1,51 @@
+<header class="header">
+      <div class="logo">
+          <a routerLink="customer"><img routerLink="/customer/" src="../../assets/cdm logo.png" alt="" /></a>
+      </div>
+    <div class="nav-search" >
+      <input *ngIf="menuType==='customers'||menuType==='accounts'||menuType==='logs'" (blur)="clearSearch()" (keyup)="onSearchTextChanged()" type="text" placeholder="Search for {{menuType}}" [(ngModel)]="enteredSearch"/>
+      <button *ngIf="menuType==='accounts'|| menuType==='customers'||menuType==='logs'"><img src="../../assets/🦆 icon _search_.png" /></button>
+    </div>
+    <div class="nav-div">
+        <ul class="nav-options">
+            <li *ngIf="menuType==='customers'">
+              <a (click)="addCustomer()"><mat-icon>person_add_alt_1</mat-icon></a>
+            </li>
+            <li *ngIf="menuType==='accounts'">
+              <a (click)="addAccount()"><mat-icon>person_add_alt_1</mat-icon></a>
+            </li>
+            <ul class="account">
+              <li>
+                <div class="admin">
+                  <button mat-icon-button [matMenuTriggerFor]="menu" >
+                    <mat-icon id="icon">account_circle</mat-icon>
+                    <p >{{adminName|titlecase}}</p>
+                  </button>
+                  
+                </div>
+                
+      
+                <mat-menu #menu="matMenu" class="customize">
+                  <button mat-menu-item class="customize-bname" >
+                    <mat-icon>badge</mat-icon>
+                    <span>{{adminName|titlecase}}</span>
+                  </button>
+                  <button routerLink="logs" mat-menu-item class="customize-b" >
+                    <mat-icon>description</mat-icon>
+                    <span>Logs</span>
+                  </button>
+                  <button (click)="resetPassword()" mat-menu-item class="customize-b">
+                    <mat-icon>password</mat-icon>
+                    <span>Reset Password</span>
+                  </button>
+                  <button (click)="logout()" mat-menu-item class="customize-b">
+                    <mat-icon>logout</mat-icon>
+                    <span>Logout</span>
+                  </button>
+                </mat-menu>
+              </li>
+            </ul>
+          </ul>
+    </div>
+</header>
+

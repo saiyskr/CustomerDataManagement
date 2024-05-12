@@ -1,0 +1,43 @@
+
+<div class="customers" >
+  <div class="table">
+    <div class="table_section">
+      <table>
+        <thead >
+          <tr>
+            <th>Customer</th>
+            <th>Name</th>
+            <th>Sector</th>
+            <th>GSTIN</th>
+            <th>Email</th>
+            <th></th>
+          </tr>
+          <br>
+          
+        </thead>
+        
+        <tbody>
+            <tr class="body-row" *ngFor="let customer of customerList|paginate: {itemsPerPage: pageSize, currentPage: pageNumber, totalItems:totalCustomer} "  >
+              <td routerLink="/customer/{{customer.gstin}}/accounts"><img src="{{customer?.logo}}"></td>
+              <td routerLink="/customer/{{customer.gstin}}/accounts" data-title="Name">{{customer?.customerName}}</td>
+              <td routerLink="/customer/{{customer.gstin}}/accounts" data-title="Sector">{{customer?.typeOfCompany}}</td>
+              <td routerLink="/customer/{{customer.gstin}}/accounts" class="numeric" data-title="GSTIN">{{customer?.gstin}}</td>
+              <td routerLink="/customer/{{customer.gstin}}/accounts" data-title="Email">{{customer?.email}}</td>
+              <td>
+                
+                <button class="update_btn" (click)="updateCustomer(customer.gstin)">Update</button>
+                <button  class="delete_btn" (click)="deleteCustomer(customer.gstin)">Delete</button>
+                
+              </td>
+            </tr>
+  
+          
+        </tbody>  
+      </table>
+      <div class="paginationclass">
+        <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
+      </div>
+    </div>
+  </div>
+  </div>
+  

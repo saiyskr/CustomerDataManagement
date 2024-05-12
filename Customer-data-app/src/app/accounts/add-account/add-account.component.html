@@ -1,0 +1,180 @@
+<h1 mat-dialog-title class="titlehead">{{data.modalTitle}}</h1>
+<div mat-dialog-content style="max-height: 100vh;">
+
+    <form [formGroup]="accountAddForm" >
+
+        <table class="example-full-width" cellspacing="0">
+            <tr class="table-row">
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Account ID</mat-label>
+                    <input matInput type="text" formControlName="accountId" id="accountId" name="accountId" readonly>
+                    <mat-icon matSuffix>vpn_key</mat-icon>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>GSTIN</mat-label>
+                    <input matInput type="text" formControlName="gstin" id="gstin" name="gstin" readonly>
+                    <mat-icon matSuffix></mat-icon>
+                </mat-form-field>      
+            </td>
+            </tr>
+        </table>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Account Name</mat-label>
+            <input matInput type="text" formControlName="accountName" name="accountName" >
+            <mat-icon matSuffix>person</mat-icon>
+            <mat-error *ngIf="accountName && accountName.invalid">
+            <strong>Name Required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" *ngIf="data.modalTitle=='Add Account Form'">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" name="email" >
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-error *ngIf="email && email.invalid && email.touched">
+            <strong>Please Enter valid email</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" *ngIf="data.modalTitle=='Update Account Form'">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" name="email" readonly>
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-error *ngIf="email && email.invalid && email.touched">
+            <strong>Please Enter valid email</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <ngx-mat-intl-tel-input
+                name="phoneNo"
+                [preferredCountries]="['in', 'us']"
+                [enablePlaceholder]="true"
+                [enableSearch]="true"
+                placeholder="Phone"
+                formControlName="phoneNo">
+            </ngx-mat-intl-tel-input>
+            <mat-error *ngIf="accountAddForm.controls.phoneNo.errors?.required">Phone <strong>Required</strong></mat-error>
+            <mat-error *ngIf="accountAddForm.controls.phoneNo.errors?.validatePhoneNumber">invalid <strong>Number</strong></mat-error>
+            </mat-form-field>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr class="table-row">
+                <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Manager</mat-label>
+                        <input type="text" matInput formControlName="manager" name="manager" >
+                        <mat-icon matSuffix>supervisor_account</mat-icon>
+                        <mat-error *ngIf="manager && manager.invalid && manager.touched">
+                            <strong>Please Enter valid text</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </td>
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Year Of Establishment</mat-label>
+                    <input type="text" matInput formControlName="yearOfEst" name="yearOfEst" pattern="[0-9]*">
+                    <mat-icon matSuffix>today</mat-icon>
+                    <mat-error *ngIf="yearOfEst && yearOfEst.invalid && yearOfEst.touched">
+                        <strong>Please Enter a valid year</strong>
+                    </mat-error>
+                </mat-form-field>        
+            </td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr class="table-row">
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>No. of Employees</mat-label>
+                    <input type="number" matInput formControlName="noOfEmp" name="noOfEmp" >
+                    <mat-icon matSuffix>groups</mat-icon>
+                    <mat-error *ngIf="noOfEmp && noOfEmp.invalid && noOfEmp.touched">
+                        <strong>Please Enter valid Number</strong>
+                    </mat-error>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Number Of Departments</mat-label>
+                    <input type="number" matInput formControlName="noOfDept" name="noOfDept" >
+                    <mat-icon matSuffix>account_balance</mat-icon>
+                    <mat-error *ngIf="noOfDept && noOfDept.invalid && noOfDept.touched">
+                        <strong>Please Enter valid Number Of Departments</strong>
+                    </mat-error>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Operating Hours</mat-label>
+                    <input type="number" matInput formControlName="operatingHours" name="operatingHours" >
+                    <mat-icon matSuffix>watch_later</mat-icon>
+                    <mat-error *ngIf="operatingHours && operatingHours.invalid && operatingHours.touched">
+                    <strong>Please Enter valid operating hours</strong>
+                    </mat-error>
+                </mat-form-field>
+            </td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr class="table-row">
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Location</mat-label>
+                    <input type="text" matInput formControlName="location" name="location" (click)="openGoogleMap()">
+                    <mat-icon matSuffix>location_on</mat-icon>
+                </mat-form-field>
+            </td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr class="table-row">
+
+                <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Revenue</mat-label>
+                        <input type="number" matInput formControlName="revenue" name="revenue" >
+                        <mat-icon matSuffix>attach_money</mat-icon>
+                        <mat-error><strong>Required</strong></mat-error>
+                    </mat-form-field>
+                </td>
+                <td>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Expenses</mat-label>
+                        <input type="number" matInput formControlName="expenses" name="expenses" >
+                        <mat-icon matSuffix>attach_money</mat-icon>
+                        <mat-error><strong>Required</strong></mat-error>
+                    </mat-form-field>
+                </td>
+
+                <td>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Profit</mat-label>
+                        <input type="number" matInput formControlName="profit" name="profit" >
+                        <mat-icon matSuffix>attach_money</mat-icon>
+                        <mat-error><strong>Required</strong></mat-error>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <mat-form-field appearance="fill">
+            <mat-label>Services Offered</mat-label>
+            <textarea matInput formControlName="servicesOffered" name="servicesOffered" ></textarea>
+            <mat-icon matSuffix>mode_edit</mat-icon>
+            <mat-error><strong>Required</strong></mat-error>
+        </mat-form-field>
+    </form>
+    <div mat-dialog-action [align]="'end'" class="button-class">
+        <button mat-raised-button color="warn" mat-dialog-close class="closebtn">Close</button>
+        <button style="background-color: #00599C;" [disabled]="accountAddForm.invalid" mat-raised-button color="primary" type="submit" class="submitbtn"  (click)="addAccount()">{{data.button}}</button>
+    </div>
+</div>

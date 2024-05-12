@@ -1,0 +1,30 @@
+footer{
+	text-align: center;
+	background-color: #00599C;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	height: 5%;
+	display: flex;
+	justify-content: center;
+    z-index: 1;
+}
+.socialmedia{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.socialmedia{
+	align-items: center;
+}
+footer ul li{
+	list-style: none;
+	padding-right: 50%;
+}
+footer ul li a{
+	cursor: pointer;
+}
+i{
+	color: white;
+	font-size: large;
+}

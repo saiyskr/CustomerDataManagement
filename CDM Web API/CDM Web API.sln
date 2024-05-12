@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDM Web API", "CDM Web API\CDM Web API.csproj", "{F65E6BFC-4803-4476-84EC-E7A0DF8E39E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F65E6BFC-4803-4476-84EC-E7A0DF8E39E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65E6BFC-4803-4476-84EC-E7A0DF8E39E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65E6BFC-4803-4476-84EC-E7A0DF8E39E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65E6BFC-4803-4476-84EC-E7A0DF8E39E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BD9CB7F-C5BA-423A-98D0-A88421629DF7}
+	EndGlobalSection
+EndGlobal
